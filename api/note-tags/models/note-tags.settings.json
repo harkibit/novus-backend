@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "note_tags",
+  "info": {
+    "name": "noteTags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "notes": {
+      "collection": "note",
+      "via": "note_tags",
+      "dominant": true
+    }
+  }
+}

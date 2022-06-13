@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "name": "note"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "note_tags": {
+      "via": "notes",
+      "collection": "note-tags"
+    }
+  }
+}

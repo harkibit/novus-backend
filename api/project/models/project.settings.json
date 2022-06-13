@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "due_date": {
+      "type": "date"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "string"
+    },
+    "user_id": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "projects"
+    },
+    "tasks": {
+      "collection": "task"
+    }
+  }
+}

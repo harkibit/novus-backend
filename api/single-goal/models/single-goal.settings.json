@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "single_goals",
+  "info": {
+    "name": "singleGoal"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "goals": {
+      "collection": "goals",
+      "via": "single_goals",
+      "dominant": true
+    }
+  }
+}

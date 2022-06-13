@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "task"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "inprogress",
+        "done"
+      ]
+    },
+    "tags": {
+      "via": "tasks",
+      "collection": "tag"
+    }
+  }
+}

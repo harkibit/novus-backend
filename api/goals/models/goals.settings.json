@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "goals",
+  "info": {
+    "name": "goals"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "inprogress",
+        "completed"
+      ]
+    },
+    "single_goals": {
+      "via": "goals",
+      "collection": "single-goal"
+    }
+  }
+}
